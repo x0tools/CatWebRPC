@@ -29,6 +29,5 @@
         await window.catwampy.connect();
         console.log('RPC调用注册完成');
     } catch (error) {
-        console.log(error);
     } 
 })();
