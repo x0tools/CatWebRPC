@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "autobahn": "^22.11.1",
+    "express": "^4.18.2",
+    "fox-wamp": "^0.7.10"
+  }
+}
