@@ -4,5 +4,6 @@
 
 server wamp路由 基于 express fox-wamp autobahn
 npm i express
+npm i body-parser
 npm i fox-wamp
 npm i autobahn
