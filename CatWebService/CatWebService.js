@@ -5,6 +5,7 @@
         window.catwampy = new Wampy('ws://127.0.0.1:5000/rpc', { realm: 'catrpc' });
         //尝试一直重连
         window.catwampy.setOptions({maxRetries:0});
+        window.count__ = 0;
         //设置代理
         window.catwampy = new Proxy(window.catwampy, {
             get: (target, key) => {
@@ -17,6 +18,8 @@
                         }
                         let hookfunc = arguments[1];
                         arguments[1] = function(){
+                           window.count__ = window.count__+1;
+                           console.log(window.count__);
                            return hookfunc.apply(this, arguments[0]?.argsList)
                         }
                         arguments[1].ishook = true;

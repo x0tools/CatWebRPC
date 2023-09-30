@@ -28,7 +28,7 @@ app.post('/call', async (req, res) => {
         }
         if (session != null) {
             let r = await session.call(`${req.query.topic}`, req.body);
-            res.send(GetReturnMsg(0, `${r}`)); return;
+            res.send(GetReturnMsg(0, JSON.stringify(r))); return;
         } else {
             res.send(GetReturnMsg(-1, "500 服务器未初始化成功")); return;
         }
