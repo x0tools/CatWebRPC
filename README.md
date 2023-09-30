@@ -46,7 +46,7 @@ window.catwampy.register('cat.rpc.zhiyuan', zhiyuan, { concurrency: 10 });
 
 ```
 POST请求
-POST http://IP:PROT/call?topic HTTP/1.1
+POST http://IP:PROT/call?topic=接口的topic HTTP/1.1
 Content-Type: application/json
 
 ["参数1","参数2",1,true,1.1，{}]  //类似json 支持不同类型  类似js apply(this,参数数组) 中的参数数组
